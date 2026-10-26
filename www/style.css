@@ -730,6 +730,17 @@ dialog .primary {
 	text-underline-offset: 2px
 }
 
+#shareForm[hidden] {
+	display: none
+}
+
+.share-result strong {
+	display: inline-block;
+	margin-bottom: 5px;
+	color: #286448;
+	font: 700 12px Manrope, sans-serif
+}
+
 .copy-link {
 	display: inline-flex;
 	align-items: center;

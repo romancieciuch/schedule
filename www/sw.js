@@ -1,4 +1,4 @@
-const CACHE = 'schedule-shell-v14'
+const CACHE = 'schedule-shell-v15'
 const SHELL = ['/', '/index.html', '/style.css', '/app.js', '/manifest.webmanifest', '/pwa-icon.svg']
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting() })
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('schedule-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())) })
